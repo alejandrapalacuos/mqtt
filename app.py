@@ -3,7 +3,7 @@ import time
 import streamlit as st
 import json
 values = 0.0
-act1="OFF"
+act1="ON"
 
 def on_publish(client,userdata,result):             #create function for callback
     print("el dato ha sido publicado \n")
@@ -25,31 +25,17 @@ client1.on_message = on_message
 
 
 
-st.title("Cerrar garaje")
+st.title("Apagar luces")
 
-if st.button('Cerrar garaje'):
-    act1="ON"
-    client1= paho.Client("alejandraPPalacios")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)  
-    message =json.dumps({"Act1":act1})
-    ret= client1.publish("maluma_s", message)
-    st.write("El garaje se está cerrando...")
- 
-    #client1.subscribe("Sensores")
-    
-    
-else:
-    st.write('')
 
-if st.button('Detener la puerta'):
+if st.button('Apagar luces'):
     act1="OFF"
     client1= paho.Client("alejandraPPalacios")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("maluma_s", message)
-    st.write("La puerta se ha detenido")
+    st.write("Las luces se han apagado")
   
     
 
