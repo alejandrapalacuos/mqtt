@@ -25,7 +25,7 @@ client1.on_message = on_message
 
 
 
-st.title("MQTT Control")
+st.title("Cerrar garaje")
 
 if st.button('ON'):
     act1="ON"
@@ -50,24 +50,9 @@ if st.button('OFF'):
     ret= client1.publish("maluma_s", message)
   
     
-else:
-    st.write('')
 
-values = st.slider('Selecciona el rango de valores',0.0, 100.0)
-st.write('Values:', values)
-
-if st.button('Enviar valor analógico'):
-    client1= paho.Client("alejandraPPalacios")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)   
-    message =json.dumps({"Analog": float(values)})
-    ret= client1.publish("maluma_a", message)
     
- 
-else:
-    st.write('')
-    
-st.link_button("Go to gallery", "https://finalinterfaces-fnfqrnjj9eidx5gwyv9uul.streamlit.app/")
+st.link_button("Volver a inicio", "https://finalinterfaces-fnfqrnjj9eidx5gwyv9uul.streamlit.app/")
 
 
 
