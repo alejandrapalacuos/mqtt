@@ -66,7 +66,8 @@ if st.button('Enviar valor analógico'):
  
 else:
     st.write('')
-
+    
+st.link_button("Go to gallery", "https://finalinterfaces-fnfqrnjj9eidx5gwyv9uul.streamlit.app/")
 
 
 
