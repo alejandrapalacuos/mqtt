@@ -34,6 +34,7 @@ if st.button('Cerrar garaje'):
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("maluma_s", message)
+    st.write("El garaje se está cerrando...")
  
     #client1.subscribe("Sensores")
     
@@ -48,6 +49,7 @@ if st.button('Detener la puerta'):
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("maluma_s", message)
+    st.write("La puerta se ha detenido")
   
     
 
