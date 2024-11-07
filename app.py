@@ -27,7 +27,7 @@ client1.on_message = on_message
 
 st.title("Cerrar garaje")
 
-if st.button('ON'):
+if st.button('Cerrar garaje'):
     act1="ON"
     client1= paho.Client("alejandraPPalacios")                           
     client1.on_publish = on_publish                          
@@ -41,7 +41,7 @@ if st.button('ON'):
 else:
     st.write('')
 
-if st.button('OFF'):
+if st.button('Detener la puerta'):
     act1="OFF"
     client1= paho.Client("alejandraPPalacios")                           
     client1.on_publish = on_publish                          
