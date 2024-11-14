@@ -34,7 +34,7 @@ if st.button('Apagar luces'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("vocesita", message)
+    ret= client1.publish("vocecita", message)
     st.write("Las luces se han apagado")
 else:
     st.write('')
@@ -45,7 +45,7 @@ if st.button('Prender luces'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("vocesita", message)
+    ret= client1.publish("vocecita", message)
     st.write("Las luces se han prendido")
 else:
     st.write('')
