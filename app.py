@@ -37,7 +37,7 @@ if st.button('Apagar luces'):
     ret= client1.publish("vocesita", message)
     st.write("Las luces se han apagado")
     
-else if st.button('Prender luces'):
+elif st.button('Prender luces'):
     act1="enciende las luces"
     client1= paho.Client("alejandraPPalacios")                           
     client1.on_publish = on_publish                          
