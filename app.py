@@ -36,8 +36,10 @@ if st.button('Apagar luces'):
     message =json.dumps({"Act1":act1})
     ret= client1.publish("vocesita", message)
     st.write("Las luces se han apagado")
+else:
+    st.write('')
     
-elif st.button('Prender luces'):
+if st.button('Prender luces'):
     act1="enciende las luces"
     client1= paho.Client("alejandraPPalacios")                           
     client1.on_publish = on_publish                          
@@ -45,7 +47,8 @@ elif st.button('Prender luces'):
     message =json.dumps({"Act1":act1})
     ret= client1.publish("vocesita", message)
     st.write("Las luces se han prendido")
-    
+else:
+    st.write('')
 
     
 st.link_button("Volver a inicio", "https://finalinterfaces-fnfqrnjj9eidx5gwyv9uul.streamlit.app/")
